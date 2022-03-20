@@ -26,10 +26,25 @@ passportConfig();
 app.use(morgan('dev'));
 
 // 'Access-Control-Allow-Origin', '*'
-app.use(cors({
-  origin: 'http://localhost:3060',
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3060',
+//   credentials: true,
+// }));
+if (process.env.NODE_ENV === 'production') {
+  app.use(morgan('combined'));
+  app.use(hpp());
+  app.use(helmet({ contentSecurityPolicy: false }));
+  app.use(cors({
+    origin: 'http://birdgang.com',
+    credentials: true,
+  }));
+} else {
+  app.use(morgan('dev'));
+  app.use(cors({
+    origin: true,
+    credentials: true,
+  }));
+}
 
 // uploads 폴더 제공
 app.use('/', express.static(path.join(__dirname, 'uploads')));
