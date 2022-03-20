@@ -25,7 +25,7 @@ AWS.config.update({
 const upload = multer({
   storage: multerS3({
     s3: new AWS.S3(),
-    bucket: 'react-react-node-newby-s3-northeast',
+    bucket: 'react-node-newby-s3-northeast',
     key(req, file, cb) {
       cb(null, `original/${Date.now()}_${path.basename(file.originalname)}`)
     }
