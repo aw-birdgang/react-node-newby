@@ -101,6 +101,7 @@ jspm_packages/
 
 /front/node_modules/
 /back/node_modules/
+/lambda/node_modules/
 
 # TypeScript v1 declaration files
 typings/
