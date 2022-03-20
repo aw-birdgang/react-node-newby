@@ -138,8 +138,7 @@ typings/
 # Serverless directories
 .serverless
 /front/build/
-react-newby.cer
-react-newby-aws.cer
+aw-react-node-newby.cer
 node_modules
 .env
 .next
