@@ -139,6 +139,8 @@ typings/
 .serverless
 /front/build/
 aw-react-node-newby.cer
+rootkey.csv
+
 node_modules
 .env
 .next
