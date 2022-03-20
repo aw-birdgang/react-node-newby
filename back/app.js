@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(hpp());
   app.use(helmet({ contentSecurityPolicy: false }));
   app.use(cors({
-    origin: ['http://localhost:3060', 'nodebird.com', 'http://35.78.84.180', ],
+    origin: 'http://birdgang.kr',
     credentials: true,
   }));
 } else {
@@ -51,7 +51,7 @@ app.use(session({
   cookie: {
     httpOnly: true,
     secure: false,
-    domain: process.env.NODE_ENV === 'production' && '.nodebird.com'
+    domain: process.env.NODE_ENV === 'production' && '.birdgang.kr'
   },
 }));
 app.use(passport.initialize());
