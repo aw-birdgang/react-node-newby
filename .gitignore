@@ -139,7 +139,7 @@ typings/
 # Serverless directories
 .serverless
 /front/build/
-aw-react-node-newby.cer
+newby-aws.cer
 rootkey.csv
 
 node_modules
