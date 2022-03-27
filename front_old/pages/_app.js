@@ -5,18 +5,18 @@ import 'antd/dist/antd.css';
 
 import wrapper from '../store/configureStore';
 
-const NodeBird = ({ Component }) => (
+const AwNode = ({ Component }) => (
   <>
     <Head>
-      <title>NodeBird</title>
+      <title>AwNode</title>
       <link rel="shortcut icon" href="/favicon.ico" />
     </Head>
     <Component />
   </>
 );
 
-NodeBird.propTypes = {
+AwNode.propTypes = {
   Component: PropTypes.elementType.isRequired,
 };
 
-export default wrapper.withRedux(NodeBird);
+export default wrapper.withRedux(AwNode);
